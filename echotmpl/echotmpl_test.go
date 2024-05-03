@@ -17,7 +17,7 @@ func createServer(config Config) *echo.Echo {
 
 func TestGetRenderer(t *testing.T) {
 	var renderer = GetRenderer(Config{
-		Root:          "test/views",
+		Root:          "../test/views",
 		Extension:     ".html",
 		LayoutFolder:  "_layouts",
 		DefaultLayout: "base",
@@ -30,7 +30,7 @@ func TestGetRenderer(t *testing.T) {
 
 func TestRootTemplate(t *testing.T) {
 	app := createServer(Config{
-		Root:          "test/views",
+		Root:          "../test/views",
 		Extension:     ".html",
 		LayoutFolder:  "_layouts",
 		DefaultLayout: "base",
@@ -52,7 +52,7 @@ func TestRootTemplate(t *testing.T) {
 
 func TestSubfolderTemplate(t *testing.T) {
 	app := createServer(Config{
-		Root:          "test/views",
+		Root:          "../test/views",
 		Extension:     ".html",
 		LayoutFolder:  "_layouts",
 		DefaultLayout: "base",
@@ -70,7 +70,7 @@ func TestSubfolderTemplate(t *testing.T) {
 
 func TestChangeLayout(t *testing.T) {
 	app := createServer(Config{
-		Root:          "test/views",
+		Root:          "../test/views",
 		Extension:     ".html",
 		LayoutFolder:  "_layouts",
 		DefaultLayout: "base",
@@ -93,7 +93,7 @@ func TestChangeLayout(t *testing.T) {
 
 func TestWrongTemplate(t *testing.T) {
 	app := createServer(Config{
-		Root:          "test/views",
+		Root:          "../test/views",
 		Extension:     ".html",
 		LayoutFolder:  "_layouts",
 		DefaultLayout: "base",
